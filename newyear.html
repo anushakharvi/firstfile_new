@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <title>New Year Celabration</title>
+        <style type="text/css">
+        body {
+            background: hsla(298, 42%, 75%, 0.993);
+        }
+        .countdownContainer{
+            position: absolute;;
+            top: 50%;
+            left: 50%;
+            transform : translateX(-50%) translateY(-50%);
+            text-align: center;
+            background: rgb(199, 165, 196);
+            border: 1px solid rgb(240, 231, 231);
+            padding: 50px;
+            box-shadow: 0 0 8px 5px rgb(12, 12, 12);
+        }
+        .info {
+            font-size: 50px;
+        }
+        #btn{
+            font-size: 15px;
+            padding: 5px;
+            width: 10%;
+        }
+        </style>
+    </head>
+    <body>
+        <table class= "countdownContainer">
+             <tr class= "info">
+                 <td colspan= "4">NEW YEAR CELABRATION</td>
+             </tr>
+             <tr class = "info">
+                <td id = "days"></td>
+                <td id = "hours"></td>
+                <td id = "minutes"></td>
+                <td id = "seconds"></td>
+            </tr>
+            <tr>
+                <td>DAYS</td>
+                <td>HOURS</td>
+                <td>MINUTES</td>
+                <td>SECONDS</td>
+            </tr>
+            <tr>
+                <a href="file:///C:/Users/user/Desktop/git_programs/countdown3.html">
+                <button id="btn">back</button>
+                </a>
+            </tr>
+        </table>
+        <script type="text/javascript">
+
+            function countdown(){
+                var now = new Date();
+                var eventDate = new Date(2022, 0, 01);
+                var currentTime = now.getTime();
+                var eventTime = eventDate.getTime();
+                var remTime = eventTime - currentTime;
+                var seconds = Math.floor(remTime / 1000);
+                var minutes = Math.floor(seconds / 60);
+                var hours = Math.floor(minutes / 60);
+                var days = Math.floor(hours / 24);
+                hours %= 24;
+                minutes %= 60;
+                seconds %= 60;
+                hours = (hours < 10) ? "0" + hours : hours;
+                minutes = (minutes < 10) ? "0" + minutes : minutes;
+                seconds = (seconds < 10) ? "0" + seconds : seconds;
+                document.getElementById("days").textContent = days;
+                document.getElementById("days").innerText = days;
+                document.getElementById("hours").textContent = hours;
+                document.getElementById("minutes").textContent = minutes;
+                document.getElementById("seconds").textContent = seconds;
+                setTimeout(countdown, 1000);
+            }
+            countdown();
+        </script>
+    </body>
+</html>
+ 
