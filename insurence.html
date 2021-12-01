@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HDFC ERGO</title>
+        <style type="text/css">
+            *{
+                margin:0;
+                padding:0;
+             }
+            body
+            {
+                background-color:cornsilk;
+                background-position: center;
+                background-size: cover;
+                font-family: sans-serif;
+                margin-top: 40px;
+            }
+            .container
+            {
+                width:900px;
+            
+                position: relative;
+                background-color:rgb(219, 250, 250);
+                color:black;
+                padding:26px 5px 0px 40px;
+                text-align:left;
+                margin:auto;
+                font-size: 25px;
+               
+            }
+            .main{
+                background-color: rgb(219, 250, 250);
+                width:900px;
+                padding:26px 5px 70px 40px;
+                margin:auto;
+                text-align:auto;
+                position: relative;
+            }
+            form{
+                padding:-10px;
+            }
+            .name{
+                width:100%;
+                height: 80px;
+            }
+            .details{
+                margin-top: 0px;
+                width: 125px;
+                color:white;
+                font-size: 20px;
+                font-weight: 700;
+                border-radius: 15px 15px 0px;
+            }
+            .name1{
+                position: relative;
+                line-height: 40px;
+                width:600px;
+                border-radius: 6px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                
+            }
+            .email{
+                position: relative;
+                line-height: 40px;
+                width:600px;
+                border-radius: 6px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+               
+            }
+            .number{
+                position: relative;
+                line-height: 40px;
+                width:600px;
+                border-radius: 6px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                
+            }
+            .coverage{
+                margin-left: 10px;
+                margin-top: 30px;
+                font-size: 18px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                
+
+            }
+            .cover input[type="radio"]
+            {
+                opacity:0;
+                position: fixed;
+                width:0;
+            }
+            .cover label{
+                background-color: white;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size:15px;
+                color:red;
+                border-radius:71px;
+                height: 50px;
+                width:200px;
+                padding:12px;
+                text-align: center;
+                font-weight: bold;
+            }
+            .cover input[type="radio"]:checked + label
+            {
+                background-color:red;
+            color:white;
+            }
+            label:hover, label:active{
+                background-color: red;
+            color:white;
+            }
+            .cover input[type="checkbox"]{
+                font-size: 1px;
+            }
+            .check{
+                color:#505250;
+                font-size: 12px;
+            }
+            #btn{
+                border: none;
+                color:white;
+                text-align: center;
+                padding: 15px 32px;
+                display:inline-block;
+                font-size: 16px;
+                cursor:pointer;
+                border-radius: 25px;
+                height: 50px;
+                width:600px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            
+        </style>
+        <script>
+            function enable()
+            {
+               var btn=document.getElementById("btn").style.backgroundColor="red";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">Quick Quote For Your Car Insurence.</div>
+        <div class="main">
+            <form>
+                <div class="name">
+                    <span class="details"></span>
+                    <input type="text" class="name1" placeholder="Name" required>
+                </div>
+                <div class="name">
+                    <span class="details"></span>
+                    <input class="email" type="email" placeholder="Email" required>
+                </div>
+                <div class="name">
+                    <span class="details"></span>
+                    <input type="int" class="number" placeholder="Phone Number" maxlength="10" pattern="[6-9]{1}[0-9]{9}" required>
+                </div>
+                    <span class="coverage">Coverage Type</span><br><br>
+                    <div class="cover">
+                        <input type="radio" id="comp" name="cover1" value="Comprahensive">
+                        <label for="comp">Comprahensive</label>
+                        <input type="radio" id="thirdparty" name="cover1" value="Third Party">
+                        <label for="thirdparty">Third Party</label>                     
+                        <input type="radio" id="notsure" name="cover1" value="NotSure">
+                        <label for="notsure">Not Sure</label>
+                    </div><br>
+                <div class="check">
+                    <input type="checkbox" id="check1" onclick="enable()">
+                    I hereby authorize HDFC ERGO general insurence to contact me.
+                    I agree that this consent will override my NDNC registration.
+                </div><br>
+                    <input type="submit" id="btn" style="background-color: gray" value="GET QUOTE NOW!">
+                    <button disabled="true"></button>
+                </div>               
+            </form>
+        </div>
+    </body>
+</html>
